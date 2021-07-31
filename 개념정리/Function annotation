@@ -1,0 +1,27 @@
+* 함수 어노테이션: 함수가 받는 매개변수의 자료형과 반환하는 값의 자료형 지정. 
+  ex) def circle_area(radius: float) -> float:
+	      return radius * radius * pi
+      ➤ 함수 circle_area 매개변수 radius의 자료형 float, 함수 circle_area 반환하는 값(radius * radius * pi)의 자료형 float
+      
+      
+* 변수 어노테이션: 변수 자료형 지정.
+  ex) pi = 3.14159
+      pi: float = 3.14159
+      
+           
+* 예시 
+
+pi: float = 3.14159
+
+def circle_area(radius: float) -> float:
+	return radius * radius * pi
+
+print(circle_area(4))
+print(__annotations__) #이 코드 구역의 어노테이션을 모두 출력
+print(circle_area.__annotations__) #해당 함수 내의 어노테이션을 모두 출력
+
+
+➤　output
+50.26544
+{'pi': <class 'float'>}
+{'radius': <class 'float'>, 'return': <class 'float'>}
